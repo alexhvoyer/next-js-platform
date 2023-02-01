@@ -9,6 +9,7 @@
     "build"
   ],
   "compilerOptions": {
+    "baseUrl": ".",
     "jsx": "preserve",
     "target": "es2017",
     "lib": [

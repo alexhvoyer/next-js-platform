@@ -1,6 +1,6 @@
-import { faker } from '@faker-js/faker';
+const { faker } = require('@faker-js/faker');
 
-export const getFeedData = () => {
+const getFeedData = () => {
     const getFeedItem = () => ({
         id: faker.datatype.number(),
         title: faker.lorem.word({ length: { min: 2, max: 10 } }),
@@ -9,6 +9,9 @@ export const getFeedData = () => {
         rating: faker.datatype.number({ min: -100, max: 10000 }),
         commentsCount: faker.datatype.number(100),
     });
-
     return Array(100).fill(null).map(getFeedItem);
 };
+
+module.exports = {
+    getFeedData,
+}

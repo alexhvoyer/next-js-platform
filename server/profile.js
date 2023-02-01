@@ -1,8 +1,12 @@
-import { faker } from '@faker-js/faker';
+const { faker } = require('@faker-js/faker');
 
-export const profile = {
+const profile = {
     id: faker.datatype.number(),
     userName: faker.name.fullName(),
     email: faker.internet.email(),
     avatar: faker.internet.avatar(),
 };
+
+module.exports = {
+    profile,
+}

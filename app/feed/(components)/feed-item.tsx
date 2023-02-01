@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { FeedItem } from "../../../types/feed";
+import { FeedItem } from "types/feed";
 
 type Props = FeedItem;
 

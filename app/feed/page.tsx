@@ -4,7 +4,7 @@ import { useInfiniteQuery } from 'react-query';
 import { Virtuoso } from 'react-virtuoso';
 import Footer from './(components)/footer';
 import FeedItem from './(components)/feed-item';
-import { Feed } from '../../types/feed';
+import { Feed } from 'types/feed';
 
 const getFeed = ({ pageParam = 0 }) => {
     const requestUrl = new URL('http://localhost:3000/feed');
@@ -25,7 +25,7 @@ export default () => {
                 components={{ Footer }}
                 data={data.pages.flat()}
                 itemContent={(_, data) => (
-                    <FeedItem {...data} />
+                    <FeedItem key={data.id} {...data} />
                 )} />
         )
     }

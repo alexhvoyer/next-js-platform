@@ -1,6 +1,6 @@
-import { faker } from '@faker-js/faker';
+const { faker } = require('@faker-js/faker');
 
-export const getNotificationData = () => {
+const getNotificationData = () => {
     const getNotificationItem = () => ({
         id: faker.datatype.number(),
         title: faker.lorem.word({ length: { min: 2, max: 10 } }),
@@ -10,3 +10,7 @@ export const getNotificationData = () => {
 
     return Array(20).fill(null).map(getNotificationItem);
 };
+
+module.exports = {
+    getNotificationData,
+}

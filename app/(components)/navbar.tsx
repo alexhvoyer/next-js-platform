@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Profile } from "../../types/profile";
+import { Profile } from "types/profile";
 
 const getNotificationsCount = async (): Promise<number> => {
     const res = await fetch('http://localhost:3000/notification?_start=0&_end=10');
